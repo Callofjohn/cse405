@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OH no jonathan is messing with stuff</title>
+
+    
+    <script defer src="/__/firebase/7.14.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.2/firebase-auth.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+
+    <script defer src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+
+    <script defer src="/__/firebase/init.js"></script>
+
+   
+  </head>
+  <body>
+    <div id="msg">Please wait </div>
+      <h2>Welcome Jonathan Pena</h2>
+      <h1>I have been waiting</h1>
+      <p>The Halo series is one of the best in the gaming world. Here is a video</p>
+      <a target="_blank" href="https://www.youtube.com/watch?v=T9Ezd2FqxAU">Open halo video</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById("msg").innerText = "what is up my boi"
+       
+        // firebase.auth().onAuthStateChanged(user => { });
+          //const app = firebase.app();
+        })
+    </script>
+  </body>
+</html>
