@@ -18,17 +18,54 @@
    
   </head>
   <body>
-    <div id="msg">Please wait </div>
-      <h2>Welcome Jonathan Pena</h2>
+    <div id="a_msg">Please wait </div>
+    <div id="a_logging_in" style="display: none">
+  
+    <div>
+      Email: <input id="a_email" type="text" value="hi john" />
+      <input id="a_send_link_btn" type="submit" value="Sign in" />
+    </div>
+    </div>
+  
+    <div id= "a_logged_in" style ="display: none">
+     
+      We're in 
+
+       <h2>Welcome Jonathan Pena</h2>
       <h1>I have been waiting</h1>
       <p>The Halo series is one of the best in the gaming world. Here is a video</p>
       <a target="_blank" href="https://www.youtube.com/watch?v=T9Ezd2FqxAU">Open halo video</a>
+      <input id=  "a_logout_btn" type ="submit" value= "Logout"/>
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
 
+    </div>
+
+     
+
     <script>
+       function login()
+       {
+         const email = a_email.value
+         a_msg.innerText = "welcome john"
+
+         a_logging_in.style.display = "none"
+         a_logged_in.style.display = "block"
+         //alert(email)
+       }
+
+       function Logout ()
+       {
+         a_msg.innerText = "logged out"
+         a_logging_in.style.display = "block"
+         a_logged_in.style.display = "none"
+       }
       document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById("msg").innerText = "what is up my boi"
+        document.getElementById("a_msg").innerHTML = "Signed in"
+        a_logging_in.style.display = "block"
+        a_send_link_btn.addEventListener('click', login);
+        a_logout_btn.addEventListener('click', Logout);
+       
        
         // firebase.auth().onAuthStateChanged(user => { });
           //const app = firebase.app();
